@@ -10,10 +10,9 @@ import SearchLocation from './searchLocation';
 
 export default function RootLayout(props) {
     const [isRendered, setIsRendered] = useState('yes');
-    console.log("This is the news at RootLayout", props.newsArticles)
     return (
         <div className="root-layout">
-            <SearchLocation getWeather={props.getWeather}/> 
+            <SearchLocation getWeather={props.getWeather}/>
             <br></br>
             {/* LOGS THE STATE ===> {<h1 style={{height: "50px"}}>{isRendered}</h1>} */}
             <main>

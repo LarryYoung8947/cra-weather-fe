@@ -10,11 +10,10 @@ let weather;
 export default function Home(props) {    
 //Header with Nav sidedrawer Icon, Title of App, and Animation Spinner
     //console.log("Testing props pass Home...", temp)
-    console.log(props.currentWeather.temp)
     let currentWeather = props.currentWeather
     return (
         <>
-           <WeatherDisplay temp={currentWeather.temp} height={'100px'}/> {/*Component will change based on Route */}
+           {currentWeather ? <WeatherDisplay temp={currentWeather.temp} height={'100px'}/> : null}
         </>
     )
 }

@@ -14,6 +14,7 @@ let lat
 let long
 const appid = '090dba8cbb6a244494fb0df7655d98e8'
 
+
 async function geocodioLookup() {
     console.log('inside the lookup')
     let searchValue = document.getElementById('search').value;
@@ -39,15 +40,13 @@ async function geocodioLookup() {
 
 export default function SearchLocation(props) {   
 
-    fetch.then((response) => {
-        const newData = response.data.current.temp
-    })
+    
 
     return (
         <div>
             <input type={'search'} id={'search'} placeholder="Search location"/>
             <button id={'searchButton'} onClick={() => geocodioLookup().then((data) => {
-                fetch(data);          
+               getWeather(lat, long)    
                 })}>Search</button>
                 <div id={'testDisplay'}></div>
         </div>
