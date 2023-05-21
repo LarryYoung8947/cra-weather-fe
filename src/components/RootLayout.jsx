@@ -10,9 +10,11 @@ import SearchLocation from './searchLocation';
 
 export default function RootLayout(props) {
     const [isRendered, setIsRendered] = useState('yes');
+    
+    console.log(props, "props in rootlayout")
     return (
         <div className="root-layout">
-            <SearchLocation getWeather={props.getWeather}/>
+            <SearchLocation setWeather={props.setCurrentWeather} getWeather={props.getWeather}/>
             <br></br>
             {/* LOGS THE STATE ===> {<h1 style={{height: "50px"}}>{isRendered}</h1>} */}
             <main>
@@ -27,5 +29,6 @@ export default function RootLayout(props) {
 
 RootLayout.propTypes = {
     newsArticles: array,
-    getWeather: func
+    getWeather: func,
+    setCurrentWeather: func
 }

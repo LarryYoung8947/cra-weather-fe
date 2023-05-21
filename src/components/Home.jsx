@@ -9,15 +9,17 @@ let weather;
 
 export default function Home(props) {    
 //Header with Nav sidedrawer Icon, Title of App, and Animation Spinner
-    //console.log("Testing props pass Home...", temp)
+    console.log("Testing props pass Home...", props)
     let currentWeather = props.currentWeather
+    let setCurrentWeather = props.setcurrentWeather
     return (
         <>
-           {currentWeather ? <WeatherDisplay temp={currentWeather.temp} height={'100px'}/> : null}
+           {currentWeather ? <WeatherDisplay setWeather={setCurrentWeather} weather={currentWeather} height={'100px'}/> : null}
         </>
     )
 }
 
 Home.propTypes = {
-    currentWeather: PropTypes.object
+    currentWeather: PropTypes.object,
+    setcurrentWeather: PropTypes.func
 }

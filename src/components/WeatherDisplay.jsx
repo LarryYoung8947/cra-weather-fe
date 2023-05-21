@@ -29,15 +29,17 @@ const getLocation = () => {
 
 export default function WeatherDisplay(props) {    
 //Insert Icon and Weather Information. Recycled Component should be resizeable in all types of containers
-    
+    console.log(props, "This is the props inside weather display")
     return (
         <div>
             {weatherOptionIcons.sunny}
-            {((props.temp - 273.15) * 9/5 + 32).toFixed(0)}        
+            {((props.weather.temp - 273.15) * 9/5 + 32).toFixed(0)} 
+            {}       
          </div>
     )
 }
 
 WeatherDisplay.propTypes = {
-    temp: PropTypes.number
+    temp: PropTypes.number,
+    weather: PropTypes.object
 }

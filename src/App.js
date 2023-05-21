@@ -62,8 +62,6 @@ async function getWeather(lat, long) {
     })       
     console.log(response, "this is the initial response") 
     return response
-       
-    
 }
 
 
@@ -110,8 +108,8 @@ const App = () => {
 
     const router = createBrowserRouter(
         createRoutesFromElements(
-            <Route path="/" element={<RootLayout newsArticles={headlineNews} getweather={getWeather}/>}>
-                <Route index element={<Home currentWeather={currentWeather}/>}/>
+            <Route path="/" element={<RootLayout newsArticles={headlineNews} setCurrentWeather={setCurrentWeather} getWeather={getWeather}/>}>
+                <Route index element={<Home  currentWeather={currentWeather}/>}/>
                 <Route path="hourly" element={<HourlyContainer hourlyWeather={hourlyWeather}/>}/>
                 <Route path="seven-day" element={<SevenDayContainer dailyWeather={dailyWeather}/>}/>
             </Route>
