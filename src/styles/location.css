@@ -1,0 +1,12 @@
+#locationText {
+    position: relative;
+    right: 5%;
+    height: 20px;
+    top: 30px;
+    text-align: center;
+    width: 40%;
+    margin: 10px 70% 0 10%;
+    font-family: 'Raleway', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 2em;
+}

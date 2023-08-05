@@ -1,0 +1,26 @@
+#newsContainer {
+    font-family: 'Raleway';
+    width: 100vw;
+    height: 400px;
+    text-align: center;
+}
+
+#newsSectionTitle {
+    font-size: 3em;
+}
+
+#newsContainer img {
+   float: left;
+    height: 250px;
+    margin-right: 60px;;
+}
+
+h1, h4 {
+    width: 85%;
+    top: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    text-align: center;
+}
+

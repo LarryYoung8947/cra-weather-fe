@@ -1,0 +1,10 @@
+#clock {
+    height: 20px;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 22%;
+    right: 10%;
+}

@@ -1,0 +1,39 @@
+#hourlyContainer {
+    display: flex;
+    flex-direction: row;
+    width: 150%;
+    height: 290px;
+    margin-top: 10%;
+    font-size: 0.7rem;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    align-items: center;
+    
+}
+  
+  #hourlyContainer::-webkit-scrollbar {
+    width: 0.5em; /* Adjust the width as needed */
+  }
+  
+  #hourlyContainer::-webkit-scrollbar-track {
+    background-color: rgba(28, 28, 32, 0.973);
+  }
+  
+  #hourlyContainer::-webkit-scrollbar-thumb {
+    background-color: rgba(28, 28, 32, 0.973);
+    /* Set a color for the scrollbar thumb */
+    border-radius: 0.25em; /* Adjust the border radius as needed */
+  }
+
+  #hourlyContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+  
+  .hourlyTime {
+    position: relative;
+    top: 30px;
+    font-size: 1.75em;
+    text-align: center;
+  }
+  

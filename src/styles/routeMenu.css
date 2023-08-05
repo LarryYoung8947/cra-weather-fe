@@ -1,0 +1,20 @@
+#routeMenu {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    right: 40.5%;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 54%;
+    font-size: 1.25em;
+    font-family: 'Raleway', 'sans-serif';
+    width: 20%;
+    margin: 0 25%;
+    
+}
+
+#routeMenu a {
+    text-decoration: none;
+    color: rgb(192, 192, 231);
+
+}
