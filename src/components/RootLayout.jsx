@@ -16,7 +16,7 @@ export default function RootLayout(props) {
     console.log(props, "props in rootlayout")
     return (
         <div className="root-layout">
-            <SearchLocation  getAddress={props.getAddress} setFirstRender={props.setFirstRender} setCurrentWeather={props.setCurrentWeather} setCurrentLocation={props.setCurrentLocation} getWeather={props.getWeather}/>
+            <SearchLocation  getAddress={props.getAddress} setFirstRender={props.setFirstRender} setCurrentWeather={props.setCurrentWeather} setDailyWeather={props.setDailyWeather} setHourlyWeather={props.setHourlyWeather} setCurrentLocation={props.setCurrentLocation} getWeather={props.getWeather}/>
             <br></br>
             <Location firstRender={props.firstRender} currentLocation={props.currentLocation}/>
             <Clock/>
@@ -39,6 +39,8 @@ export default function RootLayout(props) {
 RootLayout.propTypes = {
     newsArticles: array,
     getWeather: func,
+    setDailyWeather: func,
+    setHourlyWeather: func,
     setCurrentWeather: func,
     setCurrentLocation: func,
     getAddress: func,

@@ -8,10 +8,10 @@ import sevenDayStyle from '../styles/sevenDay.css'
 
 export default function SevenDayContainer(props) {    
         console.log("Testing Seven Day container and temp...", props.dailyWeather)
-        let dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        let dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday", "Sunday"]
         let days = props.dailyWeather
         const renderElements = () => {
-            let containers = days ? days.map((day) => {
+            let containers = days.map((day) => {
                 console.log("Map funtion two is working also")
                     return (
                         <div key={day.dt}>
@@ -19,8 +19,7 @@ export default function SevenDayContainer(props) {
                             <h4 className="dayNames">{dayNames[new Date(day.dt * 1000).getDay()]}</h4>
                         </div>
                     )
-            }) :
-                 <p>Rendering elements...</p>
+            }) 
                  return containers
         }
         return (

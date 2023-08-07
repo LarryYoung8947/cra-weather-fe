@@ -7,12 +7,27 @@ import RootLayout from '../components/RootLayout';
 import getWeather from '../utils/getWeather';
 
 export function configureRoutes(props) {
-   const {currentWeather, currentLocation, hourlyWeather, dailyWeather, headlineNews, firstRender, getAddress, setCurrentLocation, setCurrentWeather, setFirstRender, dataRendered} = props;
+    const {
+        currentWeather,
+        currentLocation, 
+        hourlyWeather, 
+        dailyWeather, 
+        headlineNews, 
+        firstRender, 
+        getAddress, 
+        setCurrentLocation, 
+        setHourlyWeather, 
+        setDailyWeather, 
+        setCurrentWeather, 
+        setFirstRender, 
+        dataRendered
+    } = props;
+
     return createRoutesFromElements(
-            <Route path="/" element={<RootLayout setFirstRender={setFirstRender} getAddress={getAddress} newsArticles={headlineNews} setCurrentLocation={setCurrentLocation} setCurrentWeather={setCurrentWeather} getWeather={getWeather}  firstRender={firstRender} currentLocation={currentLocation}/>}>
-                <Route index element={<Home  dataRendered={dataRendered} currentLocation={currentLocation} currentWeather={currentWeather} setCurrentWeather={setCurrentWeather}/>}/>
-                <Route path="hourly" element={<HourlyContainer currentLocation={currentLocation} hourlyWeather={hourlyWeather} currentWeather={currentWeather}/>}/>
-                <Route path="seven-day" element={<SevenDayContainer currentLocation={currentLocation} dailyWeather={dailyWeather}/>}/>
-            </Route>
-        )
+        <Route path="/" element={<RootLayout setFirstRender={setFirstRender} getAddress={getAddress} newsArticles={headlineNews} setCurrentLocation={setCurrentLocation} setCurrentWeather={setCurrentWeather} setHourlyWeather={setHourlyWeather} setDailyWeather={setDailyWeather} getWeather={getWeather}  firstRender={firstRender} currentLocation={currentLocation}/>}>
+            <Route index element={<Home  dataRendered={dataRendered} currentLocation={currentLocation} currentWeather={currentWeather} setCurrentWeather={setCurrentWeather}/>}/>
+            <Route path="hourly" element={<HourlyContainer currentLocation={currentLocation} hourlyWeather={hourlyWeather} currentWeather={currentWeather}/>}/>
+            <Route path="seven-day" element={<SevenDayContainer currentLocation={currentLocation} dailyWeather={dailyWeather}/>}/>
+        </Route>
+    )
 }

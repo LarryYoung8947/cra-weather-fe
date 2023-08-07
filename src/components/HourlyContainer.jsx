@@ -10,7 +10,7 @@ import hourlyStyle from '../styles/hourlyStyle.css'
 export default function HourlyContainer(props) {    
 //Header with Nav sidedrawer Icon, Title of App, and Animation Spinner
     
-    let hours = props.hourlyWeather;
+    let hours = props.hourlyWeather.slice(0, 12);
     console.log(hours, "this is the hourly weather")
     let renderElements = () => { 
         let containers =  hours.map((hour) => {

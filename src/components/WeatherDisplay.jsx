@@ -29,12 +29,29 @@ const getLocation = () => {
 
 
 export default function WeatherDisplay(props) {   
-    console.log(props.rendered)
+    console.log(props, "props in weatherDisplay")
+    let generateWeatherIcon = () => {
+        if (800 < props.weather.weather[0].id && props.weather.weather[0].id < 804) {
+            return weatherOptionIcons.partlyCloudy
+        } else if(props.weather.weather.id === 804) {
+            return weatherOptionIcons.cloudy
+        } else if(519 < props.weather.weather[0].id && props.weather.weather[0].id < 532) {
+            return weatherOptionIcons.rain
+        } else if(199 < props.weather.weather[0].id && props.weather.weather[0].id < 233) {
+            return weatherOptionIcons.storms
+        } else {
+            return weatherOptionIcons.sunny
+        }
+    }
+    let weatherIcon = generateWeatherIcon();
+    let weatherTitle = props.weather.weather[0].main
+    
 //Insert Icon and Weather Information. Recycled Component should be resizeable in all types of containers
     return (
          <div id="weatherBox" style={weatherDisplayStyle}>            
-            {weatherOptionIcons.sunny}<br></br>
-            {((props.temp - 273.15) * 9/5 + 32).toFixed(0) + '\u00B0' + 'F'}<br></br>     
+            {weatherIcon}<br></br>
+            {((props.temp - 273.15) * 9/5 + 32).toFixed(0) + '\u00B0' + 'F'}<br></br> 
+            <p id="weatherTitle">{weatherTitle}</p>    
          </div> 
     )
 }

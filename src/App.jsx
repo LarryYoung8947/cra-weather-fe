@@ -83,6 +83,8 @@ const App = () => {
       getWeather,
       setCurrentLocation,
       setCurrentWeather,
+      setHourlyWeather,
+      setDailyWeather,
       currentWeather,
       currentLocation,
       hourlyWeather,
