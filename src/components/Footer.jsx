@@ -16,7 +16,7 @@ export default function Footer() {
         return (
             <>
                 <div style={{paddingBottom: "20px"}}>
-                <h2 style={{display: "inline", width: "20%"}}>WeatherFE | Larry Young</h2>
+                <h2 style={{display: "inline", width: "20%", paddingLeft: "5%"}}>WeatherFE | Larry Young</h2>
                 <h4 style={{display: "inline", width: "20%"}}>Powered by the Open Weather Map and News API <a href="https://openweathermap.org/">Open Weather</a></h4>
                 </div>
                 <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", width: "100%"}}>
