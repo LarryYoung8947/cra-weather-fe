@@ -1,3 +1,14 @@
+*******THIS IS A BEGINNER PROJECT LEARNING HOW TO CODE - DISCONTINUED***************
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
